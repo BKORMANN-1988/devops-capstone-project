@@ -180,7 +180,7 @@ class TestAccountService(TestCase):
         """It should return security headers"""
         response = self.client.get('/', environ_overrides=HTTPS_ENVIRON)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        #'X-XSS-Protection': '1; mode=block',
+        # 'X-XSS-Protection': '1; mode=block',
         headers = {
             'X-Frame-Options': 'SAMEORIGIN',
             'X-Content-Type-Options': 'nosniff',
